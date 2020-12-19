@@ -41,16 +41,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @objc func keyboardWillShow(_ notification:Notification) {
         print("keyboard show")
-        
-        // Sometimes the show event is triggered twice.
-        // We check the animation duration and if it is 0 then it's a fake one
-        if let duration = notification.userInfo?["UIKeyboardAnimationDurationUserInfoKey"] {
-            if let duration = duration as? Float {
-                if duration > 0 {
-                    view.frame.origin.y -= getKeyboardHeight(notification)
-                }
-            }
-        }
+        view.frame.origin.y -= getKeyboardHeight(notification)
     }
     
     @objc func keyboardWillHide(_ notification:Notification) {
