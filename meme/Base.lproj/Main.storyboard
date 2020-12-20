@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jrx-jp-4Ov">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jrx-jp-4Ov">
                                 <rect key="frame" x="8" y="88" width="398" height="725"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -42,12 +42,12 @@
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Eos-k3-yqb"/>
-                                    <barButtonItem title="Camera" id="qj5-2I-x0l">
+                                    <barButtonItem title="Camera" image="camera" catalog="system" id="qj5-2I-x0l">
                                         <connections>
                                             <action selector="selectFromCamera:" destination="BYZ-38-t0r" id="1GA-ar-B2d"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Album" id="OYu-AP-SOH">
+                                    <barButtonItem title="Album" image="photo" catalog="system" id="OYu-AP-SOH">
                                         <connections>
                                             <action selector="selectImage:" destination="BYZ-38-t0r" id="rkq-hv-IPY"/>
                                         </connections>
@@ -59,12 +59,12 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem id="BvM-S4-dHf">
-                                        <barButtonItem key="leftBarButtonItem" title="Share" id="D4l-UG-jC0">
+                                        <barButtonItem key="leftBarButtonItem" title="Share" image="square.and.arrow.up" catalog="system" id="D4l-UG-jC0">
                                             <connections>
                                                 <action selector="share" destination="BYZ-38-t0r" id="7jo-4i-AJG"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="GCh-bB-KrL">
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" image="xmark.circle" catalog="system" id="GCh-bB-KrL">
                                             <connections>
                                                 <action selector="resetUI:" destination="BYZ-38-t0r" id="FYf-f3-UdT"/>
                                             </connections>
@@ -108,6 +108,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" catalog="system" width="128" height="94"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="xmark.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
