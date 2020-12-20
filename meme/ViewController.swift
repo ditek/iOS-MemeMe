@@ -49,7 +49,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     @objc func keyboardWillShow(_ notification:Notification) {
         print("keyboard show")
-        if bottomText.isEditing {
+        // Sometimes the show event is triggered twice.
+        // We check the animation duration and if it is 0 then it's a fake one
+        if bottomText.isEditing,
+           let duration = notification.userInfo?["UIKeyboardAnimationDurationUserInfoKey"] as? Float,
+           duration > 0 {
             view.frame.origin.y -= getKeyboardHeight(notification)
         }
     }
@@ -72,6 +76,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        return true
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
