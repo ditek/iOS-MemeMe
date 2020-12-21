@@ -89,19 +89,21 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         }
     }
     
-    // MARK: Actions
-    
-    @IBAction func selectImage(_ sender: Any) {
+    func selectImages(source: UIImagePickerController.SourceType) {
         let picker = UIImagePickerController()
         picker.delegate = self
+        picker.sourceType = source
         present(picker, animated: true, completion: nil)
     }
     
+    // MARK: Actions
+    
+    @IBAction func selectFromLibrary(_ sender: Any) {
+        selectImages(source: .photoLibrary)
+    }
+    
     @IBAction func selectFromCamera(_ sender: Any) {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.sourceType = .camera
-        present(picker, animated: true, completion: nil)
+        selectImages(source: .camera)
     }
     
     @IBAction func share() {
