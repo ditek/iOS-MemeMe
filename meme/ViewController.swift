@@ -26,6 +26,16 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         if !UIImagePickerController.isSourceTypeAvailable(.camera){
             cameraButton.isEnabled = false
         }
+        let memeTextAttributes: [NSAttributedString.Key: Any] = [
+            .strokeColor: UIColor.black,
+            .foregroundColor: UIColor.white,
+            .font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+            .strokeWidth:  -4.0,
+        ]
+        topText.defaultTextAttributes = memeTextAttributes
+        topText.textAlignment = .center
+        bottomText.defaultTextAttributes = memeTextAttributes
+        bottomText.textAlignment = .center
     }
     
     override func viewWillDisappear(_ animated: Bool) {
