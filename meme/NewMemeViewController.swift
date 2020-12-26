@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class NewMemeViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var topText: UITextField!
     @IBOutlet weak var bottomText: UITextField!
@@ -19,7 +19,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     // MARK: Lifecycle
 
-    
     override func viewWillAppear(_ animated: Bool) {
         subscribeToKeyboardNotifications()
         shareButton.isEnabled = false
@@ -129,7 +128,13 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
                     originalImage: self.imageView.image!,
                     memedImage: memeImage
                 )
-                print(meme)
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.sentMemes.append(meme)
+                
+                // Send a notification that a new Meme was saved
+                NotificationCenter.default.post(name: Meme.newMemeNotification, object: self, userInfo: nil)
+                self.dismiss(animated: true, completion: nil)
+                print("saved successfully")
             }
         }
         present(activity, animated: true, completion: nil)
