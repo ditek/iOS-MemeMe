@@ -129,7 +129,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Cancel" image="xmark.circle" catalog="system" id="GCh-bB-KrL">
                                             <connections>
-                                                <action selector="resetUI:" destination="BYZ-38-t0r" id="FYf-f3-UdT"/>
+                                                <action selector="cancel:" destination="BYZ-38-t0r" id="FYf-f3-UdT"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -171,10 +171,10 @@
             </objects>
             <point key="canvasLocation" x="2043" y="39"/>
         </scene>
-        <!--Cusotm Navigation Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="6bo-Rk-fMN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PA8-KD-fuA" customClass="CusotmNavigationController" customModule="meme" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PA8-KD-fuA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="list.dash" catalog="system" id="q7y-r1-t7b"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5kX-Vw-TCj">
@@ -257,6 +257,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="nPH-NO-JaE"/>
+                    <connections>
+                        <outlet property="flowLayout" destination="JZ1-VL-PI9" id="dfL-AD-8vt"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39m-KY-vft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

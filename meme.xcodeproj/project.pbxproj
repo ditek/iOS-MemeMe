@@ -10,7 +10,6 @@
 		028DA1032597BA4C00C204BB /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028DA1022597BA4C00C204BB /* TableViewController.swift */; };
 		028DA1062597BA6300C204BB /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028DA1052597BA6300C204BB /* CollectionViewController.swift */; };
 		028DA1092597BCDB00C204BB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028DA1082597BCDB00C204BB /* CollectionViewCell.swift */; };
-		028DA10C2597C1EC00C204BB /* CusotmNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028DA10B2597C1EC00C204BB /* CusotmNavigationController.swift */; };
 		02D50AD3258E707D00BAF611 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D50AD2258E707D00BAF611 /* AppDelegate.swift */; };
 		02D50AD5258E707D00BAF611 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D50AD4258E707D00BAF611 /* SceneDelegate.swift */; };
 		02D50AD7258E707D00BAF611 /* NewMemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D50AD6258E707D00BAF611 /* NewMemeViewController.swift */; };
@@ -25,7 +24,6 @@
 		028DA1022597BA4C00C204BB /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		028DA1052597BA6300C204BB /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		028DA1082597BCDB00C204BB /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		028DA10B2597C1EC00C204BB /* CusotmNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CusotmNavigationController.swift; sourceTree = "<group>"; };
 		02D50ACF258E707D00BAF611 /* meme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D50AD2258E707D00BAF611 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02D50AD4258E707D00BAF611 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +77,6 @@
 				028DA1022597BA4C00C204BB /* TableViewController.swift */,
 				028DA1052597BA6300C204BB /* CollectionViewController.swift */,
 				028DA1082597BCDB00C204BB /* CollectionViewCell.swift */,
-				028DA10B2597C1EC00C204BB /* CusotmNavigationController.swift */,
 				02DDB9172597F6490090E1C2 /* DetailsViewController.swift */,
 			);
 			path = meme;
@@ -160,7 +157,6 @@
 				02DDB9182597F64A0090E1C2 /* DetailsViewController.swift in Sources */,
 				02D50AE8258EC60100BAF611 /* meme.swift in Sources */,
 				028DA1092597BCDB00C204BB /* CollectionViewCell.swift in Sources */,
-				028DA10C2597C1EC00C204BB /* CusotmNavigationController.swift in Sources */,
 				02D50AD3258E707D00BAF611 /* AppDelegate.swift in Sources */,
 				028DA1032597BA4C00C204BB /* TableViewController.swift in Sources */,
 				02D50AD5258E707D00BAF611 /* SceneDelegate.swift in Sources */,

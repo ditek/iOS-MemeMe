@@ -30,7 +30,6 @@ class TableViewController: UITableViewController, MemeViewer {
     
     override func viewWillAppear(_: Bool){
         super.viewWillAppear(true)
-        print("table: ", sentMemes.count)
     }
 
     // MARK: - Table view data source
@@ -52,7 +51,7 @@ class TableViewController: UITableViewController, MemeViewer {
         self.navigationController?.pushViewController(detailController, animated: true)
     }
     
-    // MARK
+    // MARK: Callbacks
     
     @objc func newMeme(){
         let controller = storyboard?.instantiateViewController(withIdentifier: "NewMemeViewController") as! NewMemeViewController
@@ -60,7 +59,6 @@ class TableViewController: UITableViewController, MemeViewer {
     }
     
     @objc func updateView() {
-        print("updated table")
         tableView.reloadData()
     }
 

@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        sentMemes.append(Meme(topText: "test", bottomText: "test", originalImage: UIImage.init(named: "index")!, memedImage: UIImage.init(named: "index")!))
         return true
     }
 

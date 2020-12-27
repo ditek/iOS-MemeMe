@@ -40,7 +40,6 @@ class CollectionViewController: UICollectionViewController, MemeViewer {
 
     override func viewWillAppear(_: Bool){
         super.viewWillAppear(true)
-        print("collection: ", sentMemes.count)
     }
     
 
@@ -62,7 +61,7 @@ class CollectionViewController: UICollectionViewController, MemeViewer {
         self.navigationController?.pushViewController(detailController, animated: true)
     }
     
-    // MARK
+    // MARK: Segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
@@ -77,13 +76,13 @@ class CollectionViewController: UICollectionViewController, MemeViewer {
     }
 
     // MARK: Callbacks
+    
     @objc func newMeme(){
         let controller = storyboard?.instantiateViewController(withIdentifier: "NewMemeViewController") as! NewMemeViewController
         present(controller, animated: true, completion: nil)
     }
     
     @objc func updateView() {
-        print("updated coll")
         collectionView.reloadData()
     }
 

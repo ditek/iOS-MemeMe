@@ -142,11 +142,8 @@ class NewMemeViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         bottomBar.isHidden = false
     }
     
-    @IBAction func resetUI(_ sender: Any) {
-        topText.text = ""
-        bottomText.text = ""
-        imageView.image = nil
-        shareButton.isEnabled = false
+    @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     
