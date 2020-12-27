@@ -46,6 +46,14 @@ class TableViewController: UITableViewController, MemeViewer {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailController = self.storyboard!.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+        detailController.image = sentMemes[indexPath.row].memedImage
+        self.navigationController?.pushViewController(detailController, animated: true)
+    }
+    
+    // MARK
+    
     @objc func newMeme(){
         let controller = storyboard?.instantiateViewController(withIdentifier: "NewMemeViewController") as! NewMemeViewController
         present(controller, animated: true, completion: nil)

@@ -31,10 +31,11 @@ class CollectionViewController: UICollectionViewController, MemeViewer {
         
         // Flow layout setup
         let space: CGFloat = 3.0
-        let dimension = (view.frame.size.width - (2 * space)) / 3.0
+        let width = (view.frame.size.width - (2 * space)) / 3.0
+        let height = (view.frame.size.height - (2 * space)) / 3.0
         flowLayout.minimumInteritemSpacing = space
         flowLayout.minimumLineSpacing = space
-        flowLayout.itemSize = CGSize(width: dimension, height: dimension)
+        flowLayout.itemSize = CGSize(width: width, height: height)
     }
 
     override func viewWillAppear(_: Bool){
@@ -55,7 +56,27 @@ class CollectionViewController: UICollectionViewController, MemeViewer {
         return cell
     }
 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath:IndexPath) {
+        let detailController = self.storyboard!.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+        detailController.image = sentMemes[indexPath.row].memedImage
+        self.navigationController?.pushViewController(detailController, animated: true)
+    }
     
+    // MARK
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "CollectionShowDetails":
+            guard let vc = segue.destination as? DetailsViewController else {
+                fatalError("Expected DetailsViewController")
+            }
+            vc.imageView.image = (sender as! Meme).memedImage
+        default:
+            fatalError("Unexpected segue: " + segue.identifier!)
+        }
+    }
+
+    // MARK: Callbacks
     @objc func newMeme(){
         let controller = storyboard?.instantiateViewController(withIdentifier: "NewMemeViewController") as! NewMemeViewController
         present(controller, animated: true, completion: nil)

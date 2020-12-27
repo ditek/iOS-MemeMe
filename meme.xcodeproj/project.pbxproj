@@ -18,6 +18,7 @@
 		02D50ADC258E708000BAF611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02D50ADB258E708000BAF611 /* Assets.xcassets */; };
 		02D50ADF258E708000BAF611 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D50ADD258E708000BAF611 /* LaunchScreen.storyboard */; };
 		02D50AE8258EC60100BAF611 /* meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D50AE7258EC60100BAF611 /* meme.swift */; };
+		02DDB9182597F64A0090E1C2 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DDB9172597F6490090E1C2 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		02D50ADE258E708000BAF611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02D50AE0258E708000BAF611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02D50AE7258EC60100BAF611 /* meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meme.swift; sourceTree = "<group>"; };
+		02DDB9172597F6490090E1C2 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				028DA1052597BA6300C204BB /* CollectionViewController.swift */,
 				028DA1082597BCDB00C204BB /* CollectionViewCell.swift */,
 				028DA10B2597C1EC00C204BB /* CusotmNavigationController.swift */,
+				02DDB9172597F6490090E1C2 /* DetailsViewController.swift */,
 			);
 			path = meme;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			files = (
 				028DA1062597BA6300C204BB /* CollectionViewController.swift in Sources */,
 				02D50AD7258E707D00BAF611 /* NewMemeViewController.swift in Sources */,
+				02DDB9182597F64A0090E1C2 /* DetailsViewController.swift in Sources */,
 				02D50AE8258EC60100BAF611 /* meme.swift in Sources */,
 				028DA1092597BCDB00C204BB /* CollectionViewCell.swift in Sources */,
 				028DA10C2597C1EC00C204BB /* CusotmNavigationController.swift in Sources */,
